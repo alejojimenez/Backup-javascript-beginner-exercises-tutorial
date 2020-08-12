@@ -2,8 +2,9 @@
 
 function getRandomInt()
 {
-	var randomNumber = Math.random();
-	return randomNumber;
+    var randomNumber = Math.floor((Math.random() * 10) + 1);
+    //var randomNumber = Math.random();
+    return randomNumber;
 }
 
 
