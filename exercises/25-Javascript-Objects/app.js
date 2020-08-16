@@ -26,40 +26,36 @@ function addAllFamilyLuckyNumbers(anArray){
     var sumOfAllLuckyNumbers = 0; 
 
     //To-Do: loop and add; consider nested loops
-    var new_lucky_numbers = [];
-
-    for(let valor of family.members[0].lucky_numbers) {
-        if(valor == 17) {
-            new_lucky_numbers = new_lucky_numbers + 33;
-            ///////////////////////////////////////////////////////
-            // como reemplazo el valor en el array del objeto ?? //
-            // this.lucky_numbers = new_lucky_numbers;           //
-            ///////////////////////////////////////////////////////
-            this.lucky_numbers = new_lucky_numbers; 
-            console.log(this.lucky_numbers);
-            console.log(valor, new_lucky_numbers);
-            break;
-        } else {
-            new_lucky_numbers = new_lucky_numbers + valor;
-            console.log(valor, new_lucky_numbers);
-        };
-    };  
+    //var new_lucky_numbers = [];
+    //for(let valor of family.members[0].lucky_numbers) {
+    //    if(valor == 17) {
+    //        new_lucky_numbers = new_lucky_numbers + 33;
+    //        this.lucky_numbers = new_lucky_numbers; 
+    //        person.lucky_numbers[3] = 33;
+    //        console.log(this.lucky_numbers);
+    //        console.log(valor, new_lucky_numbers);
+    //        break;
+    //    } else {
+    //        new_lucky_numbers = new_lucky_numbers + valor;
+    //        console.log(valor, new_lucky_numbers);
+    //    };
+    //};  
     //console.log(); //Para separar salidas de loop 
 
     //Hint: use the anArray variable to get all of the lucky numbers
+    person.lucky_numbers[3] = 33;
+
     for (var i = 0; i < family.members.length; i++){
-        console.log(family.members[i].lucky_numbers, i);
+        //console.log(family.members[i].lucky_numbers, i);
 
         for (anArray of family.members[i].lucky_numbers) {
             sumOfAllLuckyNumbers += anArray;
-            console.log(sumOfAllLuckyNumbers);
+            //console.log(sumOfAllLuckyNumbers);
         };    
 
 	};
-    //////////////////////////////////////////
-    // Trampeado para ver el valor al final //
-    //////////////////////////////////////////
-    return sumOfAllLuckyNumbers + 16; 
+
+    return sumOfAllLuckyNumbers; 
 };
 
 //Enter all your code here:
@@ -74,7 +70,7 @@ var person3 = {
 
 var family = {
     lastname: "Doe",
-    members: [person, person2, person3]   //Array of objects, don't forget to add Jimmy
+    members: [person, person2, person3]   //Array of objects, add Jimmy to family
 };
 
 //Do not make changes below:
